@@ -1,6 +1,6 @@
 # Import a backup file in SQL Server
 
-A backup file with the extension **.bak** can be opened in SQL Server Management Studio. The steps below describe the process.
+A backup file with the extension **.bak** can be opened in SQL Server Management Studio to obtain data. The steps below describe the process.
 
 1. Download and install SQL Server
   
@@ -39,6 +39,8 @@ Click Connect.
 
 13. Your New database is now listed.
 
-You can also watch this [video](https://www.youtube.com/watch?v=kQs0Uywl4_c&list=PLh2dQuuw5qTUIREUqH5zM2fPcxdJanT5r) for directions.
+<!-- You can also watch this [video](https://www.youtube.com/watch?v=kQs0Uywl4_c&list=PLh2dQuuw5qTUIREUqH5zM2fPcxdJanT5r) for directions. -->
 
+
+</br></br>
 Author: [Edwige Songong](https://github.com/Songonge)
