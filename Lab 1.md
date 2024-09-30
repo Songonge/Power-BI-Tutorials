@@ -1,6 +1,13 @@
 # Project #1: Get Data in Power BI Desktop
 
-# Introduction
+## Table of content
+1. [Introduction](#Introduction)
+2. [Project Objectives](#Project-Objectives)
+3. [Launch Power BI Desktop](#Launch-Power-BI-Desktop)
+4. [Getting Data From SQL Server](#Getting-Data-From-SQL-Server)
+
+
+## Introduction
 This project is an introduction to the Power BI Desktop application. It explains how to connect to data and how to use data preview techniques to understand the characteristics and quality of the source data. 
 
 ## Project Objectives
@@ -9,14 +16,13 @@ This project is an introduction to the Power BI Desktop application. It explains
 * Preview source data  with Power Query
 * Use data profiling features in Power Query
 
-## Steps Completed Throughout the Project
-To begin with, I downloaded the zip folder through the [link](https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/raw/Main/Allfiles/Labs/01-prepare-data-with-power-query-in-power-bi-desktop/01-prepare-data.zip) provided. Then, after I extracted 
-everything, I opened the .pbix file. The following settings have been disabled:  
+## Launch Power BI Desktop
+To begin with, I downloaded the zip folder through the [link](https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/raw/Main/Allfiles/Labs/01-prepare-data-with-power-query-in-power-bi-desktop/01-prepare-data.zip) provided. Then, after I extracted everything, I opened the .pbix file. The following settings have been disabled:  
 * Data Load > Import relationships from data sources on the first load
 * Data Load > Autodetect new relationships after data is loaded  
 This was done to avoid Power BI automatically creating relationships between the data (tables).
 
-### Getting Data From SQL Server
+## Getting Data From SQL Server
 1. To complete this step, first I installed SQL Server on my computer. Then, using the backup file (.bak file) provided, I was able to extract the database containing all the tables and load it into Microsoft SQL Server Management Studio. The steps are given [here](https://github.com/Songonge/Learning-Power-BI/blob/main/Import%20a%20backup%20file%20in%20SQL%20Server.md).
 
 2. Once the database was up and functioning, I went back to Power BI to connect to the SQL Server database. On the Home tab, I selected SQL Server from inside the Data group.
@@ -44,6 +50,8 @@ This was done to avoid Power BI automatically creating relationships between the
 
 8. This completed the lab.
 
+
+</br></br>
 
 Author [Edwige Songong](https://github.com/Songonge) powered by [Microsoft Power BI](https://learn.microsoft.com/en-us/credentials/certifications/data-analyst-associate/?practice-assessment-type=certification)
 
