@@ -12,12 +12,12 @@ This project is an introduction to the Power BI Desktop application. It explains
 ## Steps Completed Throughout the Project
 To begin with, I downloaded the zip folder through the [link](https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/raw/Main/Allfiles/Labs/01-prepare-data-with-power-query-in-power-bi-desktop/01-prepare-data.zip) provided. Then, after I extracted 
 everything, I opened the .pbix file. The following settings have been disabled:  
-* Data Load > Import relationships from data sources on first load
+* Data Load > Import relationships from data sources on the first load
 * Data Load > Autodetect new relationships after data is loaded  
-This was done to avoid that Power BI automatically creates relationshipds between the data (tables).
+This was done to avoid Power BI automatically creating relationships between the data (tables).
 
 ### Getting Data From SQL Server
-To complete this step, I installed SQL Server on my computer. Then, using the backup file (.bak file), I was able to extract the tables and load them in the SQL Server. The steps are given below.
+To complete this step, I installed SQL Server on my computer. Then, using the backup file (.bak file), I was able to extract the tables and load them into the SQL Server. The steps are given [here](https://github.com/Songonge/Learning-Power-BI/blob/main/Import%20a%20backup%20file%20in%20SQL%20Server.md).
 
 
 
