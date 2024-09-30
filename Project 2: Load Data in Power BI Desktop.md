@@ -241,7 +241,7 @@ This is done by merging the product table with the ColorFormats table.
 > This transformed the Product table from 6 columns and 397 rows to 8 columns and 397 rows.
 
 ## Updating the ColorFormats Query
-This task is to update the ColorFormats query to disable it to load when I load data to Power BI. To do that, I
+This task is to update the ColorFormats query to disable it to load when I load data to Power BI since it was already merged with the Product table. To do that, I
 1. Selected the ColorFormats query.
 2. In the Query Settings pane, I selected the All Properties link.
 3. In the Query Properties window, I unchecked the Enable Load To Report checkbox.
