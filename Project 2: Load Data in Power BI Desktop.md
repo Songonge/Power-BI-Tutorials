@@ -11,10 +11,10 @@
    * [E. Configuring the Region query](#E-Configuring-the-Region-query)
    * [F. Configuring the Sales query](#F-Configuring-the-Sales-query)
    * [G. Configuring the Targets query](#G-Configuring-the-Targets-query)
-   * [H.Configuring the ColorFormats query](#H-Configuring-the-ColorFormats-query)
+   * [H. Configuring the ColorFormats query](#H-Configuring-the-ColorFormats-query)
 4. [Updating the Product Query](#Updating-the-Product-Query)
 5. [Updating the ColorFormats Query](#Updating-the-ColorFormats-Query)
-6. [Load the Data in Power BI](#Load-the-Data-in-Power-BI)
+6. [Loading the Data in Power BI Desktop](#Loading-the-Data-in-Power-BI-Desktop)
 
 
 ## Introduction
@@ -247,7 +247,7 @@ This task is to update the ColorFormats query to disable it to load when I load 
 3. In the Query Properties window, I unchecked the Enable Load To Report checkbox.
 4. Clicked on OK to confirm.
 
-## Load the Data in Power BI
+## Loading the Data in Power BI Desktop
 After completing the above steps, I clicked on **Close & Apply** under the Home tab to load the data to the model and close the Power Query Editor window.
 
 In total, 7 tables were loaded in Power BI Desktop.
