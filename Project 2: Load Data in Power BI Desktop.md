@@ -8,7 +8,7 @@
    * [B. Configuring the SalespersonRegion query](#B-Configuring-the-SalespersonRegion-query)
    * [C. Configuring the Product query](#C-Configuring-the-Product-query)
    * [D. Configuring the Reseller query](#D-Configuring-the-Reseller-query)
-   * [E. Configuring the Region query](E-Configuring-the-Region-query)
+   * [E. Configuring the Region query](#E-Configuring-the-Region-query)
    * [F. Configuring the Sales query](#F-Configuring-the-Sales-query)
    * [G. Configuring the Targets query](#G-Configuring-the-Targets-query)
    * [H.Configuring the ColorFormats query](#H-Configuring-the-ColorFormats-query)
