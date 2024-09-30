@@ -3,9 +3,9 @@
 A backup file with the extension **.bak** can be opened in SQL Server Management Studio. The steps below describe the process.
 
 1. Download and install SQL Server
-2. Click Start, select All Programs, click Microsoft SQL Server 2022 and select SQL Server Management Studio.
---> This will bring up the Connect to Server dialog box.
-Ensure that the Server name YourServerName and that Authentication is set to Windows Authentication.
+2. Click Start, select All Programs, click Microsoft SQL Server 2022, and select SQL Server Management Studio.  
+--> This will bring up the Connect to Server dialog box.  
+Please ensure that the Server name YourServerName and that Authentication is set to Windows Authentication.  
 Click Connect.
 
 2. Right-click Databases and select Restore Database.
