@@ -12,7 +12,7 @@
 5. [Bulk Update Properties](#Bulk-Update-Properties)
 6. [Exploring the Model Interface](#Exploring-the-model-interface)
 7. [Creating Quick Measures](#Creating-quick-measures)
-8. [Creating a Many-to-Many Relationship](#Creating-a-manytomany-relationship)
+8. [Creating a Many-to-Many Relationship](#Creating-a-many-to-many-relationship)
 9. [Relating the Targets Table](#Relating-the-Targets-table)
 
 ## Introduction
