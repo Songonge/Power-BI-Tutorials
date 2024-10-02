@@ -252,7 +252,7 @@ After completing the above steps, I clicked on **Close & Apply** under the Home 
 
 In total, 7 tables were loaded in Power BI Desktop.
 
-This completed the lab.
+This completed the project.
 
 </br></br>
 
