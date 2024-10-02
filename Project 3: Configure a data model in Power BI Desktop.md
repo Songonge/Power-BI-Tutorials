@@ -6,24 +6,24 @@
 3. [Creating Model Relationships](#Creating-model-relationships)
 4. [Creating Additional Relationships](#Creating-additional-relationships)
 5. [Configuring the Product Table](#Configuring-the-Product-table)
-   * [A. Creating a Hierarchy in the Product Table](#1-Creating-a-Hierarchy-in-the-Product-Table)
-   * [B. Organizing Columns Into a Display Folder](#2-Organizing-Columns-Into-a-Display-Folder)
+   * [A. Creating a Hierarchy in the Product Table](#A-Creating-a-Hierarchy-in-the-Product-Table)
+   * [B. Organizing Columns Into a Display Folder](#B-Organizing-Columns-Into-a-Display-Folder)
 6. [Configuring the Region Table](#Configuring-the-region-table)
-   * [A. Creating a Hierarchy in the Region Table](#1-Creating-a-Hierarchy-in-the-Region-Table)
-   * [B. Updating a Category](#2-Updating-a-category)
+   * [A. Creating a Hierarchy in the Region Table](#A-Creating-a-Hierarchy-in-the-Region-Table)
+   * [B. Updating a Category](#B-Updating-a-category)
 7. [Configuring the Reseller Table](#Configuring-the-Reseller-table)
-   * [A. Creating a Hierarchy in the Reseller Table](#1-Creating-a-Hierarchy-in-the-Reseller-Table)
-   * [B. Updating a Category in the Reseller Table](#2-Updating-a-category-in-the-Reseller-Table)
+   * [A. Creating a Hierarchy in the Reseller Table](#A-Creating-a-Hierarchy-in-the-Reseller-Table)
+   * [B. Updating a Category in the Reseller Table](#B-Updating-a-category-in-the-Reseller-Table)
 8. [Configuring the Sales Table](#Configuring-the-Sales-table)
-   * [A. Updating Description](#1-Updating-Description)
-   * [B. Formatting Columns](#2-Formatting-Columns)
+   * [A. Updating Description](#A-Updating-Description)
+   * [B. Formatting Columns](#B-Formatting-Columns)
 9. [Bulk Update Properties](#Bulk-Update-Properties)
-   * [Hiding Columns from the Data Model](#Hiding-Columns-from-the-Data-Model)
-   * [Formatting Columns](#2-Formatting-Columns)
-7. [Exploring the Model Interface](#Exploring-the-model-interface)
-8. [Creating Quick Measures](#Creating-quick-measures)
-9. [Creating a Many-to-Many Relationship](#Creating-a-many-to-many-relationship)
-10. [Relating the Targets Table](#Relating-the-Targets-table)
+   * [A. Hiding Columns from the Data Model](#A-Hiding-Columns-from-the-Data-Model)
+   * [B. Formatting Columns](#B-Formatting-Columns)
+10. [Exploring the Model Interface](#Exploring-the-model-interface)
+11. [Creating Quick Measures](#Creating-quick-measures)
+12. [Creating a Many-to-Many Relationship](#Creating-a-many-to-many-relationship)
+13. [Relating the Targets Table](#Relating-the-Targets-table)
 
 ## Introduction
 This project is the continuation of the one on [**Load Data in Power BI Desktop**](https://github.com/Songonge/Learning-Power-BI/blob/main/Project%202%3A%20Load%20Data%20in%20Power%20BI%20Desktop.md). It involves 
@@ -60,7 +60,7 @@ The following additional relationships were created.
 ## Configuring the Product Table 
 In this task, I create a hierarchy and also a display folder in the product table. 
 
-### 1. Creating a Hierarchy in the Product Table
+### A. Creating a Hierarchy in the Product Table
 To do that, I switched to the model view. Then, in the Data pane, I  
 * Right-clicked the Category column and selected Create Hierarchy from the menu.
 * Renamed the hierarchy to Products.
@@ -69,7 +69,7 @@ To do that, I switched to the model view. Then, in the Data pane, I
   * Product
 * Clicked on Apply Level Changes. This shows the hierarchy created in the Data pane. 
 
-### 2. Organizing Columns Into a Display Folder
+### B. Organizing Columns Into a Display Folder
 To perform this task, in the Data pane, I  
 * Selected the columns to include in the folder: Background Color Format and Font Color Format.
 * In the Properties pane, I wrote Formatting in the Display Folder box.
@@ -77,7 +77,7 @@ To perform this task, in the Data pane, I
 ## Configuring the Region Table
 In this task, I create a hierarchy and updated categories. 
 
-### 1. Creating a Hierarchy in the Region Table
+### A. Creating a Hierarchy in the Region Table
 To create a hierarchy in the Region table, I  
 * Right-clicked the Country column and selected Create Hierarchy from the menu.
 * Renamed the hierarchy to Regions.
@@ -86,7 +86,7 @@ To create a hierarchy in the Region table, I
   * Region
 * Clicked on Apply Level Changes. 
 
-### 2. Updating a Category
+### B. Updating a Category
 * To create an updated category, I
   * Selected the Country column.
   * Expanded the Advanced section in the Property pane.
@@ -97,7 +97,7 @@ To create a hierarchy in the Region table, I
 ## Configuring the Reseller Table
 In this task, I create a hierarchy and updated categories in the Reseller table. 
 
-### 1. Creating a Hierarchy in the Reseller Table
+### A. Creating a Hierarchy in the Reseller Table
 In this task, I create two hierarchies in the Reseller table. 
 
 i. The first hierarchy named Resellers had the following two levels:  
@@ -110,7 +110,7 @@ ii. The second hierarchy named Geography had the following four levels:
    * City
    * Reseller
     
-### 2. Updating a Category in the Reseller Table
+### B. Updating a Category in the Reseller Table
 The Data Category for the following columns was set:
 * Country-Region to Country/Region
 * State-Province to State or Province
@@ -119,14 +119,14 @@ The Data Category for the following columns was set:
 ## Configuring the Sales Table
 In this task, I configure the Sales table with updated descriptions, formatting, and summarization.
 
-## 1. Updating Description
+## A. Updating Description
 To configure the Sales table with updated descriptions, I
 * Selected the Cost column in the Sales table.
 * In the Description box under the Properties pane, I entered: **Based on standard cost** as a description.
 > [!NOTE]
 > This description will appear whenever I will hover the cursor over the Cost field.
 
-### 2. Formatting Columns
+### B. Formatting Columns
 i. To apply formatting to the **Quantity** column in the Sales table, I  
    * Selected the Quantity column.
    * In the Properties pane, from inside the Formatting section, I slid the Thousands Separator property to Yes.
@@ -141,7 +141,7 @@ ii. To apply formatting to the **Unit Price** column in the Sales table, I
 ## Bulk Update Properties 
 In this task, I update multiple columns using single bulk updates. Precisely, I use this approach to hide columns and format column values. 
 
-### Hiding Columns from the Data Model
+### A. Hiding Columns from the Data Model
 To do that,  
 1. I switched to the Model view.
 2. In the Data pane, I selected the ProductKey column from the Product table (Product | ProductKey).
@@ -163,7 +163,7 @@ To do that,
 > [!NOTE]
 > I hid these columns because they are either used by relationships or will later be used in row-level security configuration or calculation logic.
 
-### Formatting Columns
+### B. Formatting Columns
 To do that, in the Data pane, 
 * I selected the following three columns:
   * Product | Standard Cost
