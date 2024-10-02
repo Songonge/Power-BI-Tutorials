@@ -48,7 +48,7 @@ This was done to avoid Power BI automatically creating relationships between the
 
 7. In total, there were 8 tables loaded.
 
-8. This completed the lab.
+8. This completed the project.
 
 
 </br></br>
