@@ -172,38 +172,79 @@ To do that, in the Data pane,
 * I set the Decimal Places property to 0 (zero).
 
 ## Exploring the Model Interface 
+In this task, I switch to Report view, review the data model interface, and configure the auto date/time setting.
 
+1. When I switched to Report view and explored the tables, I noticed that:
+   * Tables with all columns hidden do not appear on the Data pane
+   * Columns, hierarchies, and their levels are fields, which can be used to configure report visuals
+   * Only fields relevant to report authoring are visible
+   * Spatial fields in the Region and Reseller table are adorned with a spatial icon
+   * Fields adorned with the sigma symbol (Ʃ) will summarize, by default
+   * A tooltip appears when hovering the cursor over the Sales | Cost field
 
-
+2. I expanded the Sales | OrderDate field and noticed that it reveals a Date Hierarchy. On the other hand, the Targets | TargetMonth field delivered a similar hierarchy. Since these hierarchies were not created by me and had a problem, I proceeded as follows to turn them off:
+   * To turn off the Auto date/time setting, I navigated to File > Options and Settings > Options.
+   * Under the Current File section, I navigated to Data Load > Time Intelligence, and unchecked Auto Date/Time.
+   * This made the date hierarchies disappear from the Data pane.
 
 ## Creating Quick Measures 
+In this task, I create two quick measures to calculate profit and profit margin. 
+> [!NOTE]
+> A quick measure creates the calculation formula for the report designer.
+> Quick measures are easy and fast to create for simple and common calculations.
 
+To create the first Quick Measure by Subtraction,   
+1. In the Data pane, I right-clicked the Sales table and selected New Quick Measure.
+2. In the Quick Measures window, I selected Subtraction in the Calculation dropdown list from inside the Mathematical Operations group.
+3. Dragged the Sales field into the Base Value box and the Cost field into the Value to Subtract box.
+4. Selected **Add**.
+5. Renamed the measure as Profit.
 
-
-
+To create the second Quick Measure by Division, 
+1. In the Data pane, I right-clicked the Sales table and selected New Quick Measure.
+2. In the Quick Measures window, I selected Division in the Calculation dropdown list from inside the Mathematical Operations group.
+3. Set the Numerator to Sales | Profit and the Denominator to Sales | Sales.
+4. Selected **Add**.
+5. Renamed the measure as Profit Margin.
+6. Set the format of the Profit Margin measure to Percentage with two decimal places.
+   
 ## Creating a Many-to-Many Relationship 
+In this task, I create a many-to-many relationship between the Salesperson table and the Sales table. To do that,  
+1. I Switched to the Report view.
+2. In the Data pane, I checked the following two fields to create a new table visual:
+   * Salesperson | Salesperson
+   * Sales | Sales
+> [!NOTE]
+> There is another relationship between salespeople and sales that was created earlier. Moreover, note that some salespeople belong to one, two, or possibly more sales regions and that sales regions can have multiple salespeople assigned to them.
+> Therefore, from a performance management perspective, a salesperson’s sales (based on their assigned territories) need to be analyzed and compared with sales targets.
 
+To create relationships to support this analysis, I  
+1. Switched to Model view.
+2. Dragged the SalespersonRegion table to position it between the Region and Salesperson tables.
+3. Used the drag-and-drop technique to create the following two model relationships:
+   * Salesperson | EmployeeKey to SalespersonRegion | EmployeeKey
+   * Region | SalesTerritoryKey to SalespersonRegion | SalesTerritoryKey
+> [!NOTE]
+> Considering that the Salesperson table filters the Sales table and the SalespersonRegion table but does not continue by propagating filters to the Region table (the arrowhead is pointing in the wrong direction), I must edit the relationship.
 
+To edit the relationship between the Region and SalespersonRegion tables, I  
+1. Double-clicked the relationship.
+2. In the Edit Relationship window, in the Cross Filter Direction dropdown list, I selected Both.
+3. Checked the Apply Security Filter in Both Directions checkbox. Then, I selected OK. This updated the relationship with a double arrowhead.
+4. Made one of the relationships between the Salesperson and Sales tables inactive by:
+   * Double-clicking the relationship between the Salesperson and Sales tables.
+   * Unchecking the Make This Relationship Active checkbox in the Edit Relationship window and selecting OK.
 
+5. Renamed the Salesperson table to Salesperson (Performance). That is because the table is used to report and analyze the performance of salespeople based on the sales of their assigned sales regions.
 
 ## Relating the Targets Table 
+In this task, I create a relationship to the Targets table. To do that, I  
+1. Created a relationship between the following columns:
+   * Salesperson (Performance) | EmployeeID column and the Targets | EmployeeID column.
+2. I could now visualize sales and targets in one table with appropriate values.
 
+This completed the project.
 
-
-> [!NOTE]
->  
-
- 
-
- 
-
-> [!IMPORTANT]
->  
- 
-
-
-
-This completed the lab.
 
 
 
