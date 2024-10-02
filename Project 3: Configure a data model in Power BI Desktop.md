@@ -12,6 +12,8 @@
      * [1. Creating a Hierarchy in the Region Table](#1-Creating-a-Hierarchy-in-the-Region-Table)
      * [2. Updating a Category](#2-Updating-a-category)
    * [C. Configuring the Reseller Table](#D-Configuring-the-Reseller-table)
+     * [1. Creating a Hierarchy in the Reseller Table](#1-Creating-a-Hierarchy-in-the-Reseller-Table)
+     * [2. Updating a Category in the Reseller Table](#2-Updating-a-category-in-the-Reseller-Table)
    * [D. Configuring the Sales Table](#F-Configuring-the-Sales-table)
 6. [Bulk Update Properties](#Bulk-Update-Properties)
 7. [Exploring the Model Interface](#Exploring-the-model-interface)
@@ -89,7 +91,27 @@ To create a hierarchy in the Region table, I
 > Categorizing the column as country or region provides more accurate information to Power BI when it renders a map visualization.
 
 ### C. Configuring the Reseller Table
+In this task, I create a hierarchy and updated categories in the Reseller table. 
 
+#### 1. Creating a Hierarchy in the Reseller Table
+In this task, I create two hierarchies in the Reseller table. 
+
+i. The first hierarchy named Resellers had the following two levels:  
+   * Business Type
+   * Reseller
+
+ii. The second hierarchy named Geography had the following four levels:  
+    * Country-Region
+    * State-Province
+    * City
+    * Reseller
+    
+
+#### 2. Updating a Category in the Reseller Table
+* To create an updated category, I
+  * Selected the Country column.
+  * Expanded the Advanced section in the Property pane.
+  * Selected Country/Region in the Data Category dropdown list.
 
 
 ### D. Configuring the Sales Table
