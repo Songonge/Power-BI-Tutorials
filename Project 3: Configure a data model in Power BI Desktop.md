@@ -115,7 +115,24 @@ The Data Category for the following columns was set:
 ### D. Configuring the Sales Table
 In this task, I configure the Sales table with updated descriptions, formatting, and summarization.
 
+#### 1. Updating Description
+To configure the Sales table with updated descriptions, I
+* Selected the Cost column in the Sales table.
+* In the Description box under the Properties pane, I entered: **Based on standard cost** as a description.
+> [!NOTE]
+> This description will appear whenever I will hover the cursor over the Cost field.
 
+#### 2. Formatting Columns
+i. To apply formatting to the **Quantity** column in the Sales table, I 
+   * Selected the Quantity column.
+   * In the Properties pane, from inside the Formatting section, I slid the Thousands Separator property to Yes.
+
+ii. To apply formatting to the **Unit Price** column in the Sales table, I 
+   * Selected the Unit Price column.
+   * In the Properties pane from inside the Formatting section, I set the Decimal Places property to 2.
+   * In the Advanced group still under the Property pane, in the Summarize By dropdown list, I selected Average.
+> [!NOTE]
+> Setting the default summarization of the Unit Price to average will produce a meaningful result, unlike the default _summarize by summing values together_ that Power BI applies to any numeric column which is not suitable for certain columns. 
 
 ## Bulk Update Properties 
 
