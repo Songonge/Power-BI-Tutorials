@@ -6,9 +6,11 @@
 3. [Creating Model Relationships](#Creating-model-relationships)
 4. [Creating Additional Relationships](#Creating-additional-relationships)
    * [A. Configuring the Product Table](#C-Configuring-the-Product-table)
-     * [1. Creating a Hierarchy](#1-Creating-a-Hierarchy)
+     * [1. Creating a Hierarchy in the Product Table](#1-Creating-a-Hierarchy-in-the-Product-Table)
      * [2. Organizing Columns Into a Display Folder](#2-Organizing-Columns-Into-a-Display-Folder)
    * [B. Configuring the Region Table](#A-Configuring-the-region-table)
+     * [1. Creating a Hierarchy in the Region Table](#1-Creating-a-Hierarchy-in-the-Region-Table)
+     * [2. Updating a Category](#2-Updating-a-category)
    * [C. Configuring the Reseller Table](#D-Configuring-the-Reseller-table)
    * [D. Configuring the Sales Table](#F-Configuring-the-Sales-table)
 6. [Bulk Update Properties](#Bulk-Update-Properties)
@@ -52,7 +54,7 @@ The following additional relationships were created.
 ### A. Configuring the Product Table 
 In this task, I create a hierarchy and also a display folder in the product table. 
 
-#### 1. Creating a Hierarchy
+#### 1. Creating a Hierarchy in the Product Table
 To do that, I switched to the model view. Then, in the Data pane, I  
 * Right-clicked the Category column and selected Create Hierarchy from the menu.
 * Renamed the hierarchy to Products.
@@ -62,11 +64,29 @@ To do that, I switched to the model view. Then, in the Data pane, I
 * Clicked on Apply Level Changes. This shows the hierarchy created in the Data pane. 
 
 #### 2. Organizing Columns Into a Display Folder
-
+To perform this task, in the Data pane, I  
+* Selected the columns to include in the folder: Background Color Format and Font Color Format.
+* In the Properties pane, I wrote Formatting in the Display Folder box.
 
 ### B. Configuring the Region Table
+In this task, I create a hierarchy and updated categories. 
 
+#### 1. Creating a Hierarchy in the Region Table
+To create a hierarchy in the Region table, I  
+* Right-clicked the Country column and selected Create Hierarchy from the menu.
+* Renamed the hierarchy to Regions.
+* Added the following two levels to the hierarchy:
+  * Country
+  * Region
+* Clicked on Apply Level Changes. 
 
+#### 2. Updating a Category
+* To create an updated category, I
+  * Selected the Country column.
+  * Expanded the Advanced section in the Property pane.
+  * Selected Country/Region in the Data Category dropdown list.
+> [!NOTE]
+> Categorizing the column as country or region provides more accurate information to Power BI when it renders a map visualization.
 
 ### C. Configuring the Reseller Table
 
