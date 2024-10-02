@@ -106,16 +106,14 @@ ii. The second hierarchy named Geography had the following four levels:
    * City
    * Reseller
     
-
 #### 2. Updating a Category in the Reseller Table
-* To create an updated category, I
-  * Selected the Country column.
-  * Expanded the Advanced section in the Property pane.
-  * Selected Country/Region in the Data Category dropdown list.
-
+The Data Category for the following columns was set:
+* Country-Region to Country/Region
+* State-Province to State or Province
+* City to City
 
 ### D. Configuring the Sales Table
-
+In this task, I configure the Sales table with updated descriptions, formatting, and summarization.
 
 
 
