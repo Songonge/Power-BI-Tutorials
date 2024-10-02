@@ -101,10 +101,10 @@ i. The first hierarchy named Resellers had the following two levels:
    * Reseller
 
 ii. The second hierarchy named Geography had the following four levels:  
-    * Country-Region
-    * State-Province
-    * City
-    * Reseller
+   * Country-Region
+   * State-Province
+   * City
+   * Reseller
     
 
 #### 2. Updating a Category in the Reseller Table
