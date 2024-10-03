@@ -56,8 +56,8 @@ In this task, I added more columns to the date table to enable filtering and gro
 1. Selected New Column on the Table Tools contextual ribbon from inside the Calculations group.
 2. In the formula bar, I wrote the following DAX: `Year = "FY" & YEAR('Date'[Date]) + IF(MONTH('Date'[Date]) > 6, 1)`
 > [!NOTE]
-> The above formula is used to calculate the fiscal year (FY) based on the date column or DAX. The formula assumes the fiscal year starts in July (which is the Adventure Work Fiscal year).
-> The YEAR('Date'[Date]) function extracts the calendar year from the date in the 'Date'[Date] column. "FY" adds the prefix "FY" to the year. This means the result will start with "FY" followed by the year (e.g., "FY2023").  
+> * The above formula is used to calculate the fiscal year (FY) based on the date column or DAX. The formula assumes the fiscal year starts in July (which is the Adventure Work Fiscal year).
+> * The YEAR('Date'[Date]) function extracts the calendar year from the date in the 'Date'[Date] column. "FY" adds the prefix "FY" to the year. This means the result will start with "FY" followed by the year (e.g., "FY2023").  
 > The MONTH('Date'[Date]) function extracts the month from the date. Then, the formula checks if the month is greater than 6 (i.e., July or later). If the condition is true (the month is July or later), it adds 1 to the year, signifying the start of the next fiscal year. If the condition is false (the month is January to June), it keeps the same year.  
 > For example: For a date in April 2023, the formula will return "FY2023", whereas for a date in August 2023, the formula will return "FY2024" because the fiscal year advances after June.
 
