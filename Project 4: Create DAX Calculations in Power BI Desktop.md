@@ -9,7 +9,7 @@
    * [B. Completing the Date Table](#B-Completing-the-Date-Table)
    * [C. Marking the Date Table](#C-Marking-the-Date-table)
 5. [Creating Simple Measures](#Creating-simple-measures)
-6. [Creating Additional Measures](#A-Creating-additional-measures)
+6. [Creating Additional Measures](#Creating-additional-measures)
 
 ## Introduction
 This project is the continuation of the one on [**Configure a Data Model in Power BI Desktop**](https://github.com/Songonge/Learning-Power-BI/blob/main/Project%203%3A%20Configure%20a%20data%20model%20in%20Power%20BI%20Desktop.md). It involves 
