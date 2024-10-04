@@ -35,8 +35,10 @@ In this task, I created the Salesperson calculated table directly related to Sal
 In Power BI Desktop, to create the Salesperson calculated table, I proceed as follows:  
 1. In Report view I selected **New Table** on the Modeling ribbon from inside the Calculations group.
 2. In the formula bar, I typed  
-   `Salesperson = 'Salesperson (Performance)'`.
-3. This adds a new table named **Salesperson** in the Data pane.
+   ```
+   Salesperson = 'Salesperson (Performance)'
+   ```
+4. This adds a new table named **Salesperson** in the Data pane.
 > [!NOTE]
 > The outcome of this DAX formula will create a copy of the Salesperson (Performance) table and assign it to a new name **Salesperson**. However, it copies the data only and discards model properties like formatting.
 
@@ -52,7 +54,9 @@ This task involved creating the Date table. To do that, I
 1. Switched to the Table view.
 2. Selected New Table on the Home tab from inside the Calculations group.
 3. Entered the following DAX in the formula bar:  
-   `Date = CALENDARAUTO(6)`
+   ```
+   Date = CALENDARAUTO(6)
+   ```
 > [!NOTE]
 > The CALENDARAUTO() function returns a single-column table consisting of date values. The “auto” behavior scans all the data model date columns to determine the earliest and latest date values stored in the present data model. It then creates one row for each date within this range, extending the range in either direction to ensure full years of data is stored.
 
@@ -63,7 +67,9 @@ In this task, I added more columns to the date table to enable filtering and gro
 To create the Year column, I  
 1. Selected New Column on the Table Tools contextual ribbon from inside the Calculations group.
 2. In the formula bar, I wrote the following DAX:  
-   `Year = "FY" & YEAR('Date'[Date]) + IF(MONTH('Date'[Date]) > 6, 1)`
+   ```
+   Year = "FY" & YEAR('Date'[Date]) + IF(MONTH('Date'[Date]) > 6, 1)
+   ```
 > [!NOTE]
 > * The above formula is used to calculate the fiscal year (FY) based on the date column or DAX. The formula assumes the fiscal year starts in July (which is the Adventure Work Fiscal year).
 > * The YEAR('Date'[Date]) function extracts the calendar year from the date in the 'Date'[Date] column. "FY" adds the prefix "FY" to the year. This means the result will start with "FY" followed by the year (e.g., "FY2023").  
@@ -80,7 +86,7 @@ To create the Quarter column, we should first bear in mind that the fiscal quart
 * Fiscal Q4: April to June.
   
 So, I proceeded as follows to create that column:  
-1. Selected New Column on the Table Tools contextual ribbon from inside the Calculations group.
+1. Added a new column to the table.
 2. In the formula bar, I wrote the following DAX:
 ```
 Quarter =
@@ -111,7 +117,7 @@ Quarter =
 > * **Example**: `MONTH('Date'[Date]) <= 3, 3)` will output `"2023 Q3"` if the fiscal year is 2023 and the month is January, February, or March.
 
 #### Creating the Month Column
-1. Selected New Column on the Table Tools contextual ribbon from inside the Calculations group.
+1. Added a New Column to the Date table.
 2. In the formula bar, I wrote the following DAX:
    ```
    Month =
@@ -124,6 +130,17 @@ Quarter =
 >   * The second argument, `"yyyy MMM"` specifies the desired format:
 >     * `"yyyy"` represents the full year (4 digits) and
 >     * `"MMM"` represents the abbreviated month name (3 letters). 
+
+> [!IMPORTANT]
+> By default, Power BI orders text alphabetically, numbers from smallest to largest, and dates from earliest to latest. For that reason, if you construct a matrix in Power BI Desktop with the current **Date** table adding the following columns: Date, Year, Quarter, and Month, you will realize that the Month column is sorted alphabetically (starting with August) instead of chronologically (starting from January). So you need to customize the Month column.
+
+To customize the Month column, I  
+1. Added a new column to the Date table.
+2. Wrote the following DAX in the formula bar:
+   ```
+   MonthKey =
+   (YEAR('Date'[Date]) * 100) + MONTH('Date'[Date])
+   ```
 
 ### B. Completing the Date Table
  
