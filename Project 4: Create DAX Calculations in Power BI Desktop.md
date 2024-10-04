@@ -181,8 +181,8 @@ To mark the **Date** table as a date table, I
 ## Creating Simple Measures
 In this task, I created simple measures. 
 > [!NOTE]
-> Simple measures aggregate values in a single column or count rows of a table.
-To create a measure, in the Data pane, I
+> Simple measures aggregate values in a single column or count rows of a table.  
+To create a measure, in the Data pane, I  
 1. Right-clicked the Sales table.
 2. Selected New Measure.
 3. I added the following measure in the formula bar:
@@ -190,29 +190,29 @@ To create a measure, in the Data pane, I
    Avg Price =
    AVERAGE(Sales[Unit Price])
    ```
-4. I also created the following measures:
+4. I also created the following measures:  
    * Median Price
      ```
      Median Price =
      MEDIAN(Sales[Unit Price])
      ```
-   * Min Price
+   * Min Price  
      ```
      MIN Price =
      MIN(Sales[Unit Price])
      ```
-   * Max Price
+   * Max Price  
      ```
      Max Price =
      MAX(Sales[Unit Price])
      ```
-   * Orders
+   * Orders  
      ```
      Orders =
      DISTINCTCOUNT(Sales[SalesOrderNumber])
      ```
 > [!NOTE]
-> The `DISTINCTCOUNT()` function counts orders only once (ignoring duplicates).
+> The `DISTINCTCOUNT()` function counts orders only once (ignoring duplicates).  
    * Order Lines
      ```
      Order Lines =
@@ -221,13 +221,13 @@ To create a measure, in the Data pane, I
 > [!NOTE]
 > The `COUNTROWS()` function operates over a table.
 
-5. I also configured the new measures created. To do that, I
+5. I also configured the new measures created. To do that, I  
    * Switched to Model view.
    * Multi-selected the four price measures above created: Avg Price, Max Price, Median Price, and Min Price.
    * Set their format to two decimal places.
-   * Assigned them a display folder named **Pricing**
+   * Assigned them a display folder named **Pricing**  
 6. I Hid the Unit Price column since the **Avg Price** values are the same as that of the **Unit Price** column and will be used instead.
-7. I multi-selected the **Order Lines** and **Orders** measures and configured the following requirements:
+7. I multi-selected the **Order Lines** and **Orders** measures and configured the following requirements:  
    * Set the format to use the thousands separator.
    * Assigned both measures to a display folder named **Counts**.
 
