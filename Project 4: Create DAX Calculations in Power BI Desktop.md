@@ -182,6 +182,8 @@ To mark the **Date** table as a date table, I
 In this task, I created simple measures. 
 > [!NOTE]
 > Simple measures aggregate values in a single column or count rows of a table.  
+
+### Creating Measures
 To create a measure, in the Data pane, I  
 1. Right-clicked the Sales table.
 2. Selected New Measure.
@@ -211,36 +213,67 @@ To create a measure, in the Data pane, I
      Orders =
      DISTINCTCOUNT(Sales[SalesOrderNumber])
      ```
-     > [!NOTE]
-     > The `DISTINCTCOUNT()` function counts orders only once (ignoring duplicates).  
+> [!NOTE]
+> The `DISTINCTCOUNT()` function counts orders only once (ignoring duplicates).  
    * Order Lines
      ```
      Order Lines =
      COUNTROWS(Sales)
      ```
 > [!NOTE]
-> The `COUNTROWS()` function operates over a table.
+> The `COUNTROWS()` function operates over a table. It summarizes a table by returning the number of rows.
 
-5. I also configured the new measures created. To do that, I  
-   * Switched to Model view.
-   * Multi-selected the four price measures above created: Avg Price, Max Price, Median Price, and Min Price.
+### Configuring and Assigning Folders to the New Measures Created
+In this task, I configured the new measures created. To do that, I  
+1. Switched to Model view.
+2. Multi-selected the four price measures above created: Avg Price, Max Price, Median Price, and Min Price. Then, I  
    * Set their format to two decimal places.
    * Assigned them a display folder named **Pricing**  
-6. I Hid the Unit Price column since the **Avg Price** values are the same as that of the **Unit Price** column and will be used instead.
-7. I multi-selected the **Order Lines** and **Orders** measures and configured the following requirements:  
-   * Set the format to use the thousands separator.
+   * hid the Unit Price column since the **Avg Price** values are the same as that of the **Unit Price** column and will be used instead.
+3. Multi-selected the **Order Lines** and **Orders** measures and configured the following requirements:  
+   * Set their format to use the thousands separator.
    * Assigned both measures to a display folder named **Counts**.
 
-
-
-
-
 ## Creating Additional Measures
+I created a new measure for the Targets table. 
+1. First, I renamed the Targets | Target column as Targets | TargetAmount. Then,
+2. I created the following measure:
+```
+Target =
+IF(
+HASONEVALUE('Salesperson (Performance)'[Salesperson]),
+SUM(Targets[TargetAmount])
+)
+```
+> [!NOTE]
+> The `HASONEVALUE()` function tests whether a single value in the Salesperson column is filtered. When true, the expression returns the sum of target amounts (for just that salesperson). When false, BLANK is returned.
+3. I format the Target measure for zero decimal places.
+4. Hid the TargetAmount column since the Target column I just created will be used instead.
 
+I also created the following two measures:
+* Variance
+```
+Variance =
+IF(
+	HASONEVALUE('Salesperson (Performance)'[Salesperson]),
+	SUM(Sales[Sales]) - [Target]
+)
+```
+* Variance Margin
+```
+Variance Margin =
+DIVIDE([Variance], [Target])
+```
+Then, I 
+* Formatted the Variance measure for zero decimal places.
+* Formatted the Variance Margin measure as percentage with zero decimal places.
 
+> [!NOTE]
+> * The function `DIVIDE()` Achieves division. You must pass in numerator and denominator expressions. Optionally, you can pass in a value that represents an alternate result. It handles division by zero cases.  
+> * It is advised to use the DIVIDE function whenever the denominator is an expression that could return zero or BLANK.  
+> * When BLANKs create unexpected results, consider using the IF and ISBLANK DAX functions to test for BLANK, and then respond appropriately.
 
-
-
+</br></br>
 
 This completed the project.
 
