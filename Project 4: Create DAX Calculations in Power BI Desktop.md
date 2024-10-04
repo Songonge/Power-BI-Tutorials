@@ -136,7 +136,7 @@ Quarter =
 > [!IMPORTANT]
 > By default, Power BI orders text alphabetically, numbers from smallest to largest, and dates from earliest to latest. For that reason, if you construct a matrix in Power BI Desktop with the current **Date** table adding the following columns: Date, Year, Quarter, and Month, you will realize that the Month column is sorted alphabetically (starting with August) instead of chronologically (starting from January). So you need to customize the Month column.
 
-To customize the Month column, I  
+To customize the **Month** column, I  
 1. Added a new column to the Date table.
 2. Wrote the following DAX in the formula bar:
    ```
@@ -195,29 +195,29 @@ To create a measure, in the Data pane, I
    AVERAGE(Sales[Unit Price])
    ```
 4. I also created the following measures:  
-   * Median Price
+   * **Median Price**
      ```
      Median Price =
      MEDIAN(Sales[Unit Price])
      ```
-   * Min Price  
+   * **Min Price**  
      ```
      MIN Price =
      MIN(Sales[Unit Price])
      ```
-   * Max Price  
+   * **Max Price**  
      ```
      Max Price =
      MAX(Sales[Unit Price])
      ```
-   * Orders  
+   * **Orders**  
      ```
      Orders =
      DISTINCTCOUNT(Sales[SalesOrderNumber])
      ```
 > [!NOTE]
 > The `DISTINCTCOUNT()` function counts orders only once (ignoring duplicates).  
-   * Order Lines
+   * **Order Lines**
      ```
      Order Lines =
      COUNTROWS(Sales)
@@ -253,7 +253,7 @@ SUM(Targets[TargetAmount])
 4. Hid the TargetAmount column since the Target column I just created will be used instead.
 
 I also created the following two measures:
-* Variance
+* **Variance**
 ```
 Variance =
 IF(
@@ -261,7 +261,7 @@ IF(
 	SUM(Sales[Sales]) - [Target]
 )
 ```
-* Variance Margin
+* **Variance Margin**
 ```
 Variance Margin =
 DIVIDE([Variance], [Target])
@@ -271,7 +271,7 @@ Then, I
 * Formatted the Variance Margin measure as percentage with zero decimal places.
 
 > [!NOTE]
-> * The function `DIVIDE()` Achieves division. You must pass in numerator and denominator expressions. Optionally, you can pass in a value that represents an alternate result. It handles division by zero cases.  
+> * The function `DIVIDE()` Achieves division. You must pass in the numerator and denominator expressions. Optionally, you can pass in a value that represents an alternate result. It handles division by zero cases.  
 > * It is advised to use the DIVIDE function whenever the denominator is an expression that could return zero or BLANK.  
 > * When BLANKs create unexpected results, consider using the IF and ISBLANK DAX functions to test for BLANK, and then respond appropriately.
 
