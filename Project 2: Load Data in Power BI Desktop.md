@@ -152,7 +152,10 @@ In this task, I used Power Query to configure each query (table). First, I opene
 4. Created a new column. To do that, I  
    * Selected Custom Column on the Add Column tab inside the General group.
    * Named the column **Cost**
-   * In the Custom column formula box, I wrote `if [TotalProductCost] = null then [OrderQuantity] * [StandardCost] else [TotalProductCost]`
+   * In the Custom column formula box, I wrote
+     ```
+     if [TotalProductCost] = null then [OrderQuantity] * [StandardCost] else [TotalProductCost]
+     ```
 
 > [!IMPORTANT]
 > The formula above tests if the TotalProductCost value is missing. If missing, it produces a value by multiplying the OrderQuantity value by the StandardCost value. Otherwise, it uses the existing TotalProductCost value.
