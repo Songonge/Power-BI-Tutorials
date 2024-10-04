@@ -14,6 +14,8 @@
    * [B. Completing the Date Table](#B-Completing-the-Date-Table)
    * [C. Marking the Date Table](#C-Marking-the-Date-table)
 6. [Creating Simple Measures](#Creating-simple-measures)
+   * [Creating Measures](#Creating-Measures)
+   * [Configuring and Assigning Folders to the New Measures Created](#Configuring-and-Assigning-Folders-to-the-New-Measures-Created)
 7. [Creating Additional Measures](#Creating-additional-measures)
 
 ## Introduction
@@ -21,9 +23,9 @@ This project is the continuation of the one on [**Configure a Data Model in Powe
 creating calculated tables, calculated columns, and simple measures using Data Analysis Expressions (DAX).
 
 ## Project Objectives
-*	Create calculated tables
-*	Create calculated columns
-*	Create measures
+* Create calculated tables
+* Create calculated columns
+* Create measures
 
 ## Creating the Salesperson Calculated Table
 In this task, I created the Salesperson calculated table directly related to Sales.
