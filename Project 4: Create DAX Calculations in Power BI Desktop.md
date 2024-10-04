@@ -211,8 +211,8 @@ To create a measure, in the Data pane, I
      Orders =
      DISTINCTCOUNT(Sales[SalesOrderNumber])
      ```
-> [!NOTE]
-> The `DISTINCTCOUNT()` function counts orders only once (ignoring duplicates).  
+     > [!NOTE]
+     > The `DISTINCTCOUNT()` function counts orders only once (ignoring duplicates).  
    * Order Lines
      ```
      Order Lines =
