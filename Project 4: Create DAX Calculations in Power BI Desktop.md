@@ -10,7 +10,7 @@
    * [A. Creating Calculated Columns in the Date Table](#A-Creating-Calculated-Columns-in-the-Date-Table)
      * [Creating the Year Column](#Creating-the-Year-Column)
      * [Creating the Quarter Column](#Creating-the-Quarter-Column)
-     * [Creating the Month Columns](#Creating-the-Month-Column)
+     * [Creating the Month Column](#Creating-the-Month-Column)
    * [B. Completing the Date Table](#B-Completing-the-Date-Table)
    * [C. Marking the Date Table](#C-Marking-the-Date-table)
 6. [Creating Simple Measures](#Creating-simple-measures)
@@ -141,14 +141,97 @@ To customize the Month column, I
    MonthKey =
    (YEAR('Date'[Date]) * 100) + MONTH('Date'[Date])
    ```
+> [!NOTE]
+> * This DAX formula is used to create a MonthKey that uniquely identifies each year and month in a numeric format. The MonthKey is commonly used for sorting or grouping in time-series analysis because it provides a unique numeric value that easily differentiates between different months and years. It is especially useful when you need a continuous sequence of months for easier calculations or comparisons, like when dealing with fiscal calendars, rolling averages, or time-based visualizations.
+> * In the formula,
+>   * the `YEAR('Date'[Date])` function extracts the year from the date in the 'Date'[Date] column.
+>   * the `MONTH('Date'[Date])` function extracts the month from the date.
+>   * In the term `YEAR('Date'[Date]) * 100`, the extracted year is multiplied by 100 to shift the year to the left by two decimal places, creating space for the month to follow.  
+>   * `(YEAR('Date'[Date]) * 100) + MONTH('Date'[Date])` adds the month to the year-multiplied-by-100 value, creating a unique numeric key for each year and month combination. For example:
+> * **Example**: 202300 + 4 = 202304 represents April 2023 in a compact numeric format.
+
+3. The Month column should be sorted using the MonthKey column. To do that,   
+   * On the Column Tools contextual ribbon, from inside the Sort group, I Selected Sort by Column.
+   * I Chose MonthKey from the list. 
 
 ### B. Completing the Date Table
- 
+In this task, I completed the design of the Date table by hiding a column and creating a hierarchy. Then, I created relationships to the Sales and Targets tables. To do that, I  
+1. Switched to Model view.
+2. In the Date table, I hid the MonthKey column since I did not need it during my analysis.
+3. On the Data right side pane, I
+   * Selected the Date table.
+   * Right-clicked and selected the Year column
+   * Selected create hierarchy from the menu.
+   * Renamed it to Fiscal.
+   * Right-clicked Quarter and Month and selected Add to hierarchy -> Fiscal.
+4. Created the following two relationships in the Model:
+   * Date | Date to Sales | OrderDate
+   * Date | Date to Targets | TargetMonth
+5. Hid the following two columns:
+   * Sales | OrderDate
+   * Targets | TargetMonth
 
 ### C. Marking the Date Table
-
+To mark the **Date** table as a date table, I  
+1. Switched to Report view.
+2. Selected the Date table In the Data pane (not the date field).
+3. Selected Mark as Date Table on the Table Tools contextual ribbon from inside the Calendars group.
+4. In the Mark as a Date Table window, I slid the Mark as a Date Table property to Yes, and in the Choose a date column dropdown list, I selected Date. Then, I clicked on Save.
 
 ## Creating Simple Measures
+In this task, I created simple measures. 
+> [!NOTE]
+> Simple measures aggregate values in a single column or count rows of a table.
+To create a measure, in the Data pane, I
+1. Right-clicked the Sales table.
+2. Selected New Measure.
+3. I added the following measure in the formula bar:
+   ```
+   Avg Price =
+   AVERAGE(Sales[Unit Price])
+   ```
+4. I also created the following measures:
+   * Median Price
+     ```
+     Median Price =
+     MEDIAN(Sales[Unit Price])
+     ```
+   * Min Price
+     ```
+     MIN Price =
+     MIN(Sales[Unit Price])
+     ```
+   * Max Price
+     ```
+     Max Price =
+     MAX(Sales[Unit Price])
+     ```
+   * Orders
+     ```
+     Orders =
+     DISTINCTCOUNT(Sales[SalesOrderNumber])
+     ```
+> [!NOTE]
+> The `DISTINCTCOUNT()` function counts orders only once (ignoring duplicates).
+   * Order Lines
+     ```
+     Order Lines =
+     COUNTROWS(Sales)
+     ```
+> [!NOTE]
+> The `COUNTROWS()` function operates over a table.
+
+5. I also configured the new measures created. To do that, I
+   * Switched to Model view.
+   * Multi-selected the four price measures above created: Avg Price, Max Price, Median Price, and Min Price.
+   * Set their format to two decimal places.
+   * Assigned them a display folder named **Pricing**
+6. I Hid the Unit Price column since the **Avg Price** values are the same as that of the **Unit Price** column and will be used instead.
+7. I multi-selected the **Order Lines** and **Orders** measures and configured the following requirements:
+   * Set the format to use the thousands separator.
+   * Assigned both measures to a display folder named **Counts**.
+
+
 
 
 
