@@ -1,4 +1,4 @@
-# Project #2: Load Data in Power BI Desktop
+# Part #2: Load Data in Power BI Desktop
 
 ## Table of content
 1. [Introduction](#Introduction)
