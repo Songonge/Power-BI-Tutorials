@@ -1,4 +1,4 @@
-# Project #4: Create DAX Calculations in Power BI Desktop
+# Part #4: Create DAX Calculations in Power BI Desktop
 
 ## Table of content
 1. [Introduction](#Introduction)
