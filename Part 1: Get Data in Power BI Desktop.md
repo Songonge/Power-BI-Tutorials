@@ -1,4 +1,4 @@
-# Project #1: Get Data in Power BI Desktop
+# Part #1: Get Data in Power BI Desktop
 
 ## Table of content
 1. [Introduction](#Introduction)
