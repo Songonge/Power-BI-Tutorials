@@ -1,4 +1,4 @@
-# Project #3: Configure a Data Model in Power BI Desktop
+# Part #3: Configure a Data Model in Power BI Desktop
 
 ## Table of content
 1. [Introduction](#Introduction)
